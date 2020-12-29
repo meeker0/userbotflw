@@ -41,13 +41,13 @@ jobs:
            ls
            cd source
            sudo docker container prune --force
-           sudo docker build . -t meeker_user
+           sudo docker build . -t meeker-user
            
        - name: running Docker
          timeout-minutes: 340
          continue-on-error: true
          run: |
-            sudo docker run meeker_user
+            sudo docker run meeker-user
            
        - name: Loop workflow
          continue-on-error: true
