@@ -45,7 +45,6 @@ jobs:
            
        - name: running Docker
          timeout-minutes: 340
-         continue-on-error: true
          run: |
             sudo docker run meeker-user-bot
            
