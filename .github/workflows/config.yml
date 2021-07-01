@@ -25,8 +25,7 @@ jobs:
        - name: cloning repo
          continue-on-error: true
          run: |
-           expect -c " 
-           spawn git clone ${{ secrets.TOKEN }}@${{ secrets.REPOM }} source
+            git clone ${{ secrets.TOKEN }}@${{ secrets.REPOM }} source
              
        - name: compilation   
          continue-on-error: true
