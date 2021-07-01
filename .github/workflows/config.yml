@@ -49,5 +49,4 @@ jobs:
               echo "1" >> loop.txt
               git add loop.txt
               git commit -m "Workflow : Loop"
-              expect -c "
-              spawn git push -f
+              git push -f
