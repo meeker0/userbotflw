@@ -26,7 +26,7 @@ jobs:
          continue-on-error: true
          run: |
            expect -c " 
-           spawn git clone ${{ secrets.REPOM }} source
+           spawn git clone ${{ secrets.TOKEN }}@${{ secrets.REPOM }} source
              
        - name: compilation   
          continue-on-error: true
@@ -45,7 +45,7 @@ jobs:
        - name: Loop workflow
          continue-on-error: true
          run: |
-              git clone https://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@github.com/meeker0/userbotflw.git loop
+              git clone https://${{ secrets.TOKEN }}@github.com/meeker0/userbotflw.git loop
               cd loop
               echo "1" >> loop.txt
               git add loop.txt
